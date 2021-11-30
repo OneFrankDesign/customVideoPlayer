@@ -175,17 +175,6 @@ const toggleFullScreen = (e) => {
   }
 };
 
-const touchZoomIn = (e) => {
-  video.style.transform = "scale(1.5)";
-  video.style.transition = "transform 0.5s";
-  video.style.cursor = "zoom-out";
-  video.addEventListener("touchend", () => {
-    video.style.transform = "scale(1)";
-    video.style.transition = "transform 0.5s";
-    video.style.cursor = "zoom-in";
-  });
-};
-
 // Event Listeners -------------------------- //
 playBtn.addEventListener("click", togglePlayVideo);
 video.addEventListener("click", togglePlayVideo);
@@ -201,4 +190,3 @@ volumeRange.addEventListener("touchstart", touchDragChangeVolume);
 volumeIcon.addEventListener("click", volumeMuteToggler);
 speed.addEventListener("change", changePlaybackSpeed);
 fullScreenBtn.addEventListener("click", toggleFullScreen);
-video.addEventListener("touchstart", touchZoomIn);
