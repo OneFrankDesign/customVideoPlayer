@@ -57,24 +57,6 @@ const toSeek = (e) => {
   updateProgressBar();
 };
 
-const mouseDragToSeekVideo = (e) => {
-  video.pause();
-  progressRange.addEventListener("mousemove", toSeek);
-  progressRange.addEventListener("mouseup", () => {
-    progressRange.removeEventListener("mousemove", toSeek);
-    video.play();
-  });
-};
-
-const touchDragToSeekVideo = (e) => {
-  video.pause();
-  progressRange.addEventListener("touchmove", toSeek);
-  progressRange.addEventListener("touchend", () => {
-    progressRange.removeEventListener("touchmove", toSeek);
-    video.play();
-  });
-};
-
 // Volume Controls --------------------------- //
 const changeVolume = (e) => {
   const width = volumeRange.clientWidth;
@@ -183,8 +165,7 @@ video.addEventListener("timeupdate", updateProgressBar);
 video.addEventListener("canplay", updateProgressBar);
 video.addEventListener("ended", showPlayIcon);
 progressRange.addEventListener("click", toSeek);
-progressRange.addEventListener("mousedown", mouseDragToSeekVideo);
-progressRange.addEventListener("touchstart", touchDragToSeekVideo);
+
 volumeRange.addEventListener("click", changeVolume);
 volumeRange.addEventListener("touchstart", touchDragChangeVolume);
 volumeIcon.addEventListener("click", volumeMuteToggler);
