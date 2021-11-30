@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Player</title>
+    <link rel="icon" type="image/png" href="./diverseground.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Blackthorn Bud Blossoming 720p -->
+    <!-- https://pixabay.com/videos/download/video-71457_tiny.mp4?attachment -->
+    <!-- Stream Mist Rays -->
+    <!-- https://pixabay.com/videos/download/video-91342_large.mp4?attachment -->
+    <!-- Tree Leaves Foilage 1080p -->
+    <!-- https://pixabay.com/videos/download/video-85526_large.mp4?attachment -->
+    <!-- Stream without sound 4k -->
+    <!-- https://pixabay.com/videos/download/video-44798_source.mp4?attachment -->
+    <div class="shadow">
+      <div class="player">
+        <video
+          src="https://www.pexels.com/video/3326930/download/?search_query=landscape&tracking_id=s1ce60s78p"
+          playsinline
+          class="video"
+        ></video>
+        <div class="show-controls">
+          <div class="controls-container">
+            <div class="progress-range" title="seek">
+              <div class="progress-bar"></div>
+            </div>
+            <div class="control-group">
+              <div class="controls-left">
+                <div class="play-controls">
+                  <i class="fas fa-play" title="Play" id="play-button"></i>
+                </div>
+                <div class="volume">
+                  <div class="volume-icon">
+                    <i
+                      class="fas fa-volume-up"
+                      title="Mute"
+                      id="volume-icon"
+                    ></i>
+                  </div>
+                  <div class="volume-range" title="Change Volume">
+                    <div class="volume-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="controls-right">
+                <div class="speed" title="Playback Rate">
+                  <select name="playbackrate" class="player-speed">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1.0x</option>
+                    <option value="1.50">1.5x</option>
+                    <option value="2">2x</option>
+                  </select>
+                </div>
+                <div class="time">
+                  <span class="time-elasped">00:00</span>
+                  <span class="time-duration">02:23</span>
+                </div>
+                <div class="fullscreen">
+                  <i
+                    class="fas fa-expand"
+                    title="Fullscreen"
+                    id="fullscreen-btn"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
