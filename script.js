@@ -158,6 +158,7 @@ const toggleFullScreen = (e) => {
     } else if (document.webkitExitFullscreen) {
       document.webkitExitFullscreen();
     }
+    player.classList.remove("video-fullscreen");
     fullScreenBtn.classList.replace("fa-compress", "fa-expand");
     isFullScreen = false;
   } else {
@@ -169,6 +170,8 @@ const toggleFullScreen = (e) => {
       player.webkitRequestFullscreen();
     }
     fullScreenBtn.classList.replace("fa-expand", "fa-compress");
+    player.classList.add("video-fullscreen");
+    isFullScreen = true;
   }
 };
 
